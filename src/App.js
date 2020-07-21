@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import Members from "./components/Members";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="grid-container">
+      <header className="header">
+        <div className="brand">
+          <Link to="/">BWA</Link>
+        </div>
+        <div className="header-link">
+          <Link to="/">Home</Link>
+          <Link to="/members/:id">Members</Link>
+        </div>
       </header>
+
+      <main className="main">
+        <div className="content">
+          <Route path="/members/:id" component={Members}></Route>
+          <Route path="/" exact={true} component={Home}></Route>
+        </div>
+      </main>
+      <footer className="footer">All rights Reserved &copy; 2020 </footer>
     </div>
   );
 }
