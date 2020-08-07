@@ -28,7 +28,7 @@ export default class Home extends Component {
                     <CountUp
                       className="counter"
                       start={0}
-                      end={300000}
+                      end={310000}
                       duration={3}
                       separator=","
                     />
