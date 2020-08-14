@@ -7,6 +7,7 @@ import march from "../images/march.jpg";
 import april from "../images/april.png";
 import may from "../images/may.jpg";
 import june from "../images/june.jpg";
+import july from "../images/July.jpg";
 import { Link } from "react-router-dom";
 
 import Chart from "./Chart";
@@ -31,7 +32,11 @@ export default class Statements extends Component {
       images = may;
     } else if (statement._id == 6) {
       images = june;
+    }else if (statement._id == 7) {
+      images = july;
     }
+
+    
 
     return (
       <div>

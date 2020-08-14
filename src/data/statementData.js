@@ -39,5 +39,11 @@ export default {
       interest: "2,400",
       cashTransacted: "54,000",
     },
+    {
+      _id: 7,
+      name: "July 2020",
+      interest: "3,300",
+      cashTransacted: "60,300",
+    },
   ],
 };
